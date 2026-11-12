@@ -5,15 +5,15 @@
 :root{--ink:#0B1033;--teal:#0E3B43;--saf:#FF9F1C;--yel:#FFD23F;--mag:#FF2E88;--lime:#B8F23A;--pap:#FFF4E0;color-scheme:dark}
 *{box-sizing:border-box;margin:0}html,body{height:100%;background:#050719;overflow:hidden;font-family:Manrope,sans-serif;color:var(--pap)}
 #stage{width:1280px;height:720px;position:absolute;left:50%;top:50%;transform-origin:0 0}
-.s{position:absolute;inset:0;padding:34px 44px 44px;background:radial-gradient(900px 500px at 85% -10%,#2a1d6e 0,transparent 60%),linear-gradient(160deg,var(--ink),var(--teal));opacity:0;visibility:hidden;transition:opacity .6s cubic-bezier(.3,.7,.2,1),transform .6s cubic-bezier(.3,.7,.2,1);transform:translateX(40px)}
+.s{position:absolute;inset:0;display:flex;flex-direction:column;padding:34px 44px 48px;background:radial-gradient(900px 500px at 85% -10%,#2a1d6e 0,transparent 60%),linear-gradient(160deg,var(--ink),var(--teal));opacity:0;visibility:hidden;transition:opacity .6s cubic-bezier(.3,.7,.2,1),transform .6s cubic-bezier(.3,.7,.2,1);transform:translateX(40px)}
 .s.on{opacity:1;visibility:visible;transform:none}
 h1,h2,h3,.dp{font-family:'Bricolage Grotesque',sans-serif}
 h2{font-size:30px;line-height:1.05;color:var(--yel);position:relative;display:inline-block;padding-bottom:8px}
 h2:after{content:"";position:absolute;left:0;bottom:0;width:100%;height:4px;background:repeating-linear-gradient(90deg,var(--saf) 0 18px,transparent 18px 26px);animation:rd 6s linear infinite}
 @keyframes rd{to{background-position:-104px 0}}
-h3{font-size:14px;color:var(--saf);margin-bottom:5px;letter-spacing:.3px}
-p,li,td,th{font-size:12px;line-height:1.38}
-.g{display:grid;gap:12px}.card{background:rgba(255,244,224,.06);border:1px solid rgba(255,159,28,.35);border-radius:6px 18px 6px 18px;padding:11px 13px}
+h3{font-size:15.5px;color:var(--saf);margin-bottom:6px;letter-spacing:.3px}
+p,li,td,th{font-size:13.5px;line-height:1.45}
+.g{display:grid;gap:12px}.s>.g{flex:1;min-height:0}.s>h2{align-self:flex-start}.s>.card{flex:none}.card{background:rgba(255,244,224,.06);border:1px solid rgba(255,159,28,.35);border-radius:6px 18px 6px 18px;padding:12px 14px;display:flex;flex-direction:column;justify-content:center}.card td{padding:4px 6px}
 .src{position:absolute;left:44px;right:150px;bottom:14px;font-size:9.5px;color:#cbbf9f}
 .so{color:var(--lime);font-weight:700}
 .t{display:inline-block;font-size:9px;font-weight:700;padding:1px 6px;border-radius:9px;margin-left:4px;vertical-align:middle;color:var(--ink)}
@@ -164,12 +164,12 @@ table{border-collapse:collapse;width:100%}th,td{padding:3px 5px;border-bottom:1p
 
 <!-- 8 THANKS -->
 <section class="s" data-n="Invite questions. Keep the problem and promise to one breath.">
-<div style="position:absolute;left:0;right:0;top:120px;text-align:center"><svg width="380" height="112" style="color:var(--pap)"><use href="#logo"/></svg>
+<div style="position:absolute;left:0;right:0;top:96px;text-align:center"><svg width="380" height="112" style="color:var(--pap)"><use href="#logo"/></svg>
 <h2 style="font-size:46px;margin-top:20px;color:var(--pap)">Thank you</h2><br>
 <p style="font-size:17px;margin-top:16px;max-width:760px;display:inline-block">Gig and informal workers earn weekly and uneven, and banks lend monthly and fixed. Kamai lets the loan follow the income.</p>
 <p class="dp" style="font-size:22px;margin-top:20px;color:var(--lime)">Questions for the panel?</p>
 <p style="margin-top:22px">Team: [names, Group No. __] &nbsp;|&nbsp; Faculty: Dr Asha Binu Raj &nbsp;|&nbsp; Contact: [email]</p>
-<div style="display:flex;gap:10px;justify-content:center;margin-top:16px;align-items:center"><span style="background:var(--ink);padding:8px;border-radius:8px;color:var(--pap)"><svg width="95" height="28"><use href="#logo"/></svg></span><span style="background:var(--pap);padding:8px;border-radius:8px;color:var(--ink)"><svg width="95" height="28"><use href="#logo"/></svg></span><span style="background:var(--saf);padding:8px;border-radius:8px;color:var(--ink)"><svg width="95" height="28"><use href="#logo"/></svg></span></div></div>
+<div style="display:flex;gap:10px;justify-content:center;margin-top:16px;align-items:center"><span style="background:var(--ink);padding:8px;border-radius:8px;color:var(--pap)"><svg width="95" height="28"><use href="#logo"/></svg></span><span style="background:var(--pap);padding:8px;border-radius:8px;color:var(--ink)"><svg width="95" height="28"><use href="#logo"/></svg></span><span style="background:var(--saf);padding:8px;border-radius:8px;color:var(--ink)"><svg width="95" height="28"><use href="#logo"/></svg></span></div><div style="display:flex;gap:14px;justify-content:center;margin-top:26px"><div class="card" style="width:200px"><span class="big">50,000</span><p>customers by Year 3<span class="t d">Derived</span></p></div><div class="card" style="width:200px"><span class="big">Rs 90 cr</span><p>outstanding book<span class="t d">Derived</span></p></div><div class="card" style="width:200px"><span class="big">44%</span><p>less stress loss than fixed EMI<span class="t d">Derived</span></p></div><div class="card" style="width:200px"><span class="big">Rs 1.8 cr</span><p>pilot exposure, 1,000 customers<span class="t d">Derived</span></p></div></div></div>
 <p class="src" style="text-align:center;left:44px;right:44px">Sources: NITI Aayog (2022); Freo (2026); Kahneman (2015); Chatfield (2022); Dobelli (2013); Levitin (2016). Art: original SVG illustrations, no third-party images. Fonts: Bricolage Grotesque, Manrope (SIL OFL).</p></section>
 </div>
 <div id="road"></div><div id="notes"></div>
