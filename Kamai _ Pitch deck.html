@@ -1,0 +1,197 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Kamai | Even footing for uneven pay</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0B1033;--teal:#0E3B43;--saf:#FF9F1C;--yel:#FFD23F;--mag:#FF2E88;--lime:#B8F23A;--pap:#FFF4E0;color-scheme:dark}
+*{box-sizing:border-box;margin:0}html,body{height:100%;background:#050719;overflow:hidden;font-family:Manrope,sans-serif;color:var(--pap)}
+#stage{width:1280px;height:720px;position:absolute;left:50%;top:50%;transform-origin:0 0}
+.s{position:absolute;inset:0;padding:34px 44px 44px;background:radial-gradient(900px 500px at 85% -10%,#2a1d6e 0,transparent 60%),linear-gradient(160deg,var(--ink),var(--teal));opacity:0;visibility:hidden;transition:opacity .6s cubic-bezier(.3,.7,.2,1),transform .6s cubic-bezier(.3,.7,.2,1);transform:translateX(40px)}
+.s.on{opacity:1;visibility:visible;transform:none}
+h1,h2,h3,.dp{font-family:'Bricolage Grotesque',sans-serif}
+h2{font-size:30px;line-height:1.05;color:var(--yel);position:relative;display:inline-block;padding-bottom:8px}
+h2:after{content:"";position:absolute;left:0;bottom:0;width:100%;height:4px;background:repeating-linear-gradient(90deg,var(--saf) 0 18px,transparent 18px 26px);animation:rd 6s linear infinite}
+@keyframes rd{to{background-position:-104px 0}}
+h3{font-size:14px;color:var(--saf);margin-bottom:5px;letter-spacing:.3px}
+p,li,td,th{font-size:12px;line-height:1.38}
+.g{display:grid;gap:12px}.card{background:rgba(255,244,224,.06);border:1px solid rgba(255,159,28,.35);border-radius:6px 18px 6px 18px;padding:11px 13px}
+.src{position:absolute;left:44px;right:150px;bottom:14px;font-size:9.5px;color:#cbbf9f}
+.so{color:var(--lime);font-weight:700}
+.t{display:inline-block;font-size:9px;font-weight:700;padding:1px 6px;border-radius:9px;margin-left:4px;vertical-align:middle;color:var(--ink)}
+.v{background:var(--lime)}.d{background:var(--yel)}.a{background:var(--mag);color:#fff}
+.c{position:absolute;right:44px;top:36px;display:flex;gap:5px}
+.c b{font-size:10px;padding:3px 8px;border:1.5px solid var(--lime);color:var(--lime);clip-path:polygon(0 0,88% 0,100% 50%,88% 100%,0 100%);padding-right:12px}
+.big{font-family:'Bricolage Grotesque';font-weight:800;font-size:34px;color:var(--saf);line-height:1}
+ul{list-style:none;padding:0}li{padding-left:15px;position:relative;margin:2px 0}
+li:before{content:"";position:absolute;left:0;top:4px;width:8px;height:8px;background:var(--saf);clip-path:path('M0 8 Q2 0 4 4 T8 0 L8 8Z')}
+table{border-collapse:collapse;width:100%}th,td{padding:3px 5px;border-bottom:1px solid rgba(255,244,224,.15);text-align:left}th{color:var(--yel)}
+.dot{display:inline-block;width:11px;height:11px;border-radius:50%;border:2px solid var(--saf)}.dot.f{background:var(--saf)}.dot.h{background:linear-gradient(90deg,var(--saf) 50%,transparent 50%)}
+#road{position:fixed;left:0;bottom:0;height:5px;background:linear-gradient(90deg,var(--mag),var(--saf),var(--yel));width:0;transition:width .6s}
+#notes{position:fixed;left:0;right:0;bottom:0;background:#000d;color:#fff;padding:14px 24px;font-size:15px;display:none;z-index:9}
+.an{opacity:0;transform:translateY(14px)}.on .an{animation:up .7s cubic-bezier(.3,.7,.2,1) forwards;animation-delay:calc(var(--i,0)*90ms)}
+@keyframes up{to{opacity:1;transform:none}}
+.fb path,.fb line{stroke-dasharray:400;stroke-dashoffset:400}.on .fb path,.on .fb line{animation:dr .8s ease forwards;animation-delay:calc(var(--i,0)*110ms)}@keyframes dr{to{stroke-dashoffset:0}}
+.pl{animation:pl 1.2s 1.2s 1}@keyframes pl{50%{fill:var(--mag)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.an{opacity:1;transform:none}.fb path,.fb line{stroke-dashoffset:0}}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="sym" viewBox="0 0 48 56"><path d="M24 2 44 10V28C44 42 34 51 24 54 14 51 4 42 4 28V10Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M10 30 16 20 21 36 27 14 32 32 38 24" fill="none" stroke="var(--saf)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="logo" viewBox="0 0 190 56"><use href="#sym" width="48" height="56"/><text x="58" y="42" font-family="Bricolage Grotesque" font-weight="800" font-size="40" fill="currentColor">Kam<tspan fill="var(--saf)">a</tspan>i</text><path d="M58 50Q74 44 88 50T118 50T148 50T178 50" stroke="var(--mag)" stroke-width="3" fill="none"/></symbol>
+</defs></svg>
+<div id="stage">
+
+<!-- 0 COVER -->
+<section class="s" data-n="Open with the problem in one line. Panel Q: why 'Kamai'? A: Hindi for earnings, two syllables, easy for a rider to say.">
+<svg style="position:absolute;right:0;top:0" width="640" height="720" viewBox="0 0 640 720"><circle cx="440" cy="250" r="150" fill="var(--saf)" opacity=".9"/><circle cx="440" cy="250" r="110" fill="var(--mag)" opacity=".75"/><path d="M0 560 640 470V720H0Z" fill="#050719"/><path d="M60 650 640 540" stroke="var(--yel)" stroke-width="5" stroke-dasharray="40 30"/><g stroke="var(--pap)" stroke-width="6" fill="none" stroke-linecap="round"><circle cx="300" cy="500" r="42"/><circle cx="440" cy="480" r="42"/><path d="M300 500 350 440 420 436 440 480M350 440 372 404 408 400"/></g><circle cx="388" cy="372" r="16" fill="var(--pap)"/><rect x="346" y="388" width="52" height="52" rx="14" fill="var(--lime)" transform="rotate(-8 372 414)"/></svg>
+<div style="position:absolute;left:54px;top:50px;width:70px;height:36px;color:var(--pap)"><svg width="190" height="56" style="color:var(--pap)"><use href="#logo"/></svg></div>
+<div style="position:absolute;left:54px;top:190px;width:640px">
+<p class="dp an" style="font-size:15px;color:var(--lime)">CTDM Sessions 9-10 | PGDM BFS | NIBM, Pune</p>
+<h1 class="an" style="--i:1;font-size:104px;line-height:.95;color:var(--yel)">Kamai</h1>
+<h2 class="an" style="--i:2;font-size:34px;color:var(--pap)">Uneven pay. Even footing.</h2>
+<p class="an" style="--i:3;font-size:16px;margin-top:14px;line-height:1.4">Credit, savings and shock-proof repayment for India's gig and informal workers: a bank-issued revolving micro-credit line with a built-in savings buffer.</p>
+<div class="an" style="--i:4;display:flex;gap:10px;margin-top:20px"><div class="card"><span class="big">23.5M</span><p>gig workers by 2029-30<span class="t v">Verified</span></p></div><div class="card"><span class="big">Rs 90 cr</span><p>Year 3 book<span class="t d">Derived</span></p></div><div class="card"><span class="big">7 mo</span><p>payback per customer<span class="t d">Derived</span></p></div></div>
+<p class="an" style="--i:5;margin-top:22px;font-size:12px">Faculty: Dr Asha Binu Raj &nbsp;|&nbsp; Group No. [__] &nbsp;|&nbsp; Team: [Name 1, Name 2, Name 3, Name 4, Name 5, Name 6, Name 7, Name 8]</p></div>
+<p class="src" style="left:54px">Kamai (कमाई) means earnings. Source: NITI Aayog, India's Booming Gig and Platform Economy, 2022. Other figures are team models, shown later.</p></section>
+
+<!-- 1 PROBLEM -->
+<section class="s" data-n="State the problem statement verbatim. Panel Q: where is the 7.7M from? A: NITI Aayog 2022, 2020-21 base. Denominator check: projection, not a count of borrowers.">
+<h2>The problem: income that moves, credit that does not</h2><div class="c"><b>CTDM U1</b></div>
+<div class="g" style="grid-template-columns:1.25fr 1fr;margin-top:16px">
+<div class="g"><div class="card an"><h3>Problem statement</h3><p>India's gig, platform and informal self-employed workers (7.7 million gig workers in 2020-21, projected 23.5 million by 2029-30) are refused formal credit or fail to repay it. Banks need a bureau score and payslip these workers lack, and then apply fixed monthly EMIs to income that arrives weekly and unevenly. With no savings buffer, any shock converts into default or into informal debt at rates far above bank APR. The bank loses a growing segment and the workers lose compounding income.</p></div>
+<div class="g" style="grid-template-columns:repeat(3,1fr)">
+<div class="card an" style="--i:1"><h3>1 Access</h3><p>No payslip, no ITR, thin bureau file. Result: rejection before assessment.</p></div>
+<div class="card an" style="--i:2"><h3>2 Structure</h3><p>Fixed 30-day EMI against weekly payouts. Result: cash-flow mismatch.</p></div>
+<div class="card an" style="--i:3"><h3>3 Resilience</h3><p>No buffer. Result: one fuel or repair shock becomes a missed instalment.</p></div></div>
+<p class="an" style="--i:4">The three failures compound: no access pushes workers to informal lenders, informal debt drains the buffer, and no buffer breaks any fixed schedule. Existing products attack at most one.</p></div>
+<div class="g"><div class="card an"><span class="big" data-n="23.5">23.5M</span><p>gig workers by 2029-30, from 7.7M in 2020-21 <span class="t v">Verified</span></p><p class="so">So what: the segment triples in a decade; the formal credit gap grows with it.</p></div>
+<div class="card an" style="--i:1"><span class="big">Rs 4.9 lakh cr</span><p>annual credit demand if 16.45M reachable workers each use a Rs 30,000 line <span class="t d">Derived</span></p><p class="so">So what: bank rejection leaves about Rs 49,350 crore of demand to informal lenders.</p></div>
+<div class="card an" style="--i:2"><span class="big">36 pts</span><p>APR gap: informal 60% vs Kamai 24% <span class="t a">Assumption</span></p><p class="so">So what: Rs 6,480 saved per borrower per year on a Rs 18,000 balance.</p></div></div></div>
+<p class="src">Sources: NITI Aayog 2022 (Verified). Derived: 23.5M x 70% with account and smartphone (Assumption) = 16.45M; x Rs 30,000 = Rs 49,350 cr. Informal rate 60% is a team assumption, range 36 to 120%, to be checked against RBI and field surveys.</p></section>
+
+<!-- 2 FISHBONE -->
+<section class="s" data-n="Walk bones left to right, stop at the three highlighted roots. Panel Q: why these three? A: each maps to one layer, and removing it changes default most in the model.">
+<h2>Root cause: fishbone and 5 Whys</h2><div class="c"><b>CTDM U1</b><b>CTDM U2</b></div>
+<svg id="fish" viewBox="0 0 1190 380" style="width:1192px;height:380px;margin-top:6px"></svg>
+<div class="g" style="grid-template-columns:1.1fr 1fr;margin-top:2px">
+<div class="card"><h3>5 Whys on the top root cause</h3><p>1 Workers miss EMIs. 2 Instalment falls due in a low-income week. 3 Schedule is fixed at 30 days. 4 Product was priced for salaried monthly income. 5 <b style="color:var(--lime)">The bank treats the month, not the week, as the unit of credit. Kamai targets this.</b></p></div>
+<div class="card"><h3>Critical thinking check</h3><p><b>Assumption challenged:</b> "No bureau score means high risk." Absence of data is not evidence of bad behaviour. <b>Claim, reason, evidence:</b> inflow stability predicts repayment, shown by 6 to 12 months of AA data. <b>Rejected:</b> a "gig workers always default" blog figure, no sample, no source, seller has an incentive.</p></div></div>
+<p class="src">Fishbone is team analysis. Colours: lime = root cause mapped to Layer 1 (underwriting), Layer 2 (buffer), Layer 3 (adaptive repayment).</p></section>
+
+<!-- 3 PRODUCT -->
+<section class="s" data-n="Define the product in one sentence. Panel Q: what stops adverse selection? A: 6 to 12 months verified inflow, first-loan cap Rs 25,000, bureau as secondary input.">
+<h2>The product: three layers, one line of credit</h2><div class="c"><b>CTDM U2</b></div>
+<p class="an" style="margin:8px 0;font-size:14px">Kamai is a regulated, bank-issued, revolving micro-credit line plus linked recurring savings account, underwritten on verified cash flows, with repayment that flexes automatically when income shocks are detected.</p>
+<div class="g" style="grid-template-columns:repeat(3,1fr)">
+<div class="card an"><h3>L1 Underwrite</h3><p>Consent via Account Aggregator for 6 to 12 months of statements. Score uses average inflow, volatility (CV), payout sources, platform share, balance floor and obligation ratio. Bureau score is secondary, never a rejection trigger.</p><p style="margin-top:6px;color:var(--yel)"><b>Limit = 1.2 x median monthly net inflow x (1 - CV)</b></p><p>Example: 1.2 x Rs 28,000 x (1 - 0.35) = Rs 21,840. First loan capped at Rs 25,000 <span class="t a">Assumption</span></p></div>
+<div class="card an" style="--i:1"><h3>L2 Buffer</h3><p>Opt-out auto-sweep of 3 to 5% of every payout into named buckets: "Bike repair", "Rain-day fund". Streak counter, loss-framed nudges. Target: 2 to 4 weeks of inflow in 9 to 12 months.</p><p class="so">So what: the buffer is the first repayment source, so a shock does not reach the bank first.</p></div>
+<div class="card an" style="--i:2"><h3>L3 Adapt</h3><p>If weekly inflow falls 25 to 30% below the 3-month median for 2 weeks, Kamai shifts the due date, moves to interest-only, or draws the buffer, with consent given at onboarding. Portfolio engine stress-tests fuel spike, payout cut, monsoon, outage and rule change.</p></div></div>
+<div class="g" style="grid-template-columns:2fr 1fr;margin-top:12px"><div class="card an"><h3>Journey</h3><p>1 Consent (AA) &rarr; 2 Cash-flow score in minutes &rarr; 3 Line set, Key Fact Statement with APR shown &rarr; 4 Draw to own bank account &rarr; 5 Auto-sweep to buckets &rarr; 6 Shock detected, schedule adjusts, SMS in Hindi.</p><p style="margin-top:6px"><b>Governance:</b> RBI Digital Lending directions: direct disbursal, APR disclosed, no hidden fees, cooling-off, grievance officer, data in India, consent-based use. First-loss guarantee, if a fintech partner is used, within the RBI 5% cap. <i>Team to re-verify current text before the panel.</i></p></div>
+<div class="card an" style="text-align:center"><svg width="150" height="150" viewBox="0 0 150 150"><rect x="38" y="4" width="74" height="142" rx="14" fill="none" stroke="var(--saf)" stroke-width="3"/><text x="75" y="30" text-anchor="middle" font-size="9" fill="var(--yel)">Limit Rs 21,840</text><rect x="48" y="40" width="54" height="9" rx="4" fill="var(--lime)"/><text x="75" y="64" text-anchor="middle" font-size="8" fill="#fff">Rain-day fund 62%</text><rect x="48" y="70" width="54" height="9" rx="4" fill="none" stroke="var(--mag)"/><rect x="48" y="70" width="33" height="9" rx="4" fill="var(--mag)"/><text x="75" y="102" text-anchor="middle" font-size="8" fill="#fff">Due moved 7 days</text><text x="75" y="122" text-anchor="middle" font-size="8" fill="var(--yel)">Streak: 11 weeks</text></svg></div></div>
+<p class="src">Design is team work. Source for rules: RBI Digital Lending Directions (verify current edition). All parameters Assumption.</p></section>
+
+<!-- 4 THINKING -->
+<section class="s" data-n="Show how each tool changed the design. Panel Q: what did lateral thinking change? A: the week, not the month, became the unit of credit.">
+<h2>How we thought: SWOT, ideas, lateral move, six hats</h2><div class="c"><b>CTDM U2</b></div>
+<div class="g" style="grid-template-columns:1fr 1fr 1.1fr;margin-top:14px">
+<div class="card an"><h3>SWOT (quantified)</h3><ul><li><b>S</b> Bank funds at about 7% vs fintech 12 to 14%, assumed</li><li><b>W</b> Onboarding 3 steps; AA consent drop-off assumed 30%</li><li><b>O</b> Gig base 7.7M to 23.5M, 3.05x growth</li><li><b>T</b> Fintech apps at 12 to 36% APR with minute-level approval</li></ul><p style="margin-top:4px"><span class="t a">Assumption</span> Design change: lean onboarding, vernacular UI.</p></div>
+<div class="card an" style="--i:1"><h3>Brainstorm funnel</h3><p><span class="big" style="font-size:26px">42</span> ideas &rarr; 6 clusters (data, repayment, savings, trust, channel, risk) &rarr; <span class="big" style="font-size:26px">3</span> shortlisted: weekly repayment unit, buffer-first repayment, platform payout sweep.</p><h3 style="margin-top:8px">Lateral move</h3><p>Treat the <b>weekly payout</b> as the unit of credit and make the <b>buffer the first repayment source</b>. This reversed the product from "loan then savings" to "savings protects the loan".</p></div>
+<div class="card an" style="--i:2"><h3>Six Thinking Hats</h3>
+<table><tr><td><b style="color:#fff">White</b></td><td>No public delinquency data for the segment. Gap: pilot must generate it.</td></tr>
+<tr><td><b style="color:var(--mag)">Red</b></td><td>Rider: relief at no payslip. Banker: fear of unknown risk.</td></tr>
+<tr><td><b style="color:#9aa">Black</b></td><td>Income hidden in cash; AA coverage incomplete; moral hazard on pauses.</td></tr>
+<tr><td><b style="color:var(--yel)">Yellow</b></td><td>Payback 7 months, loss 5.5% vs 9%.</td></tr>
+<tr><td><b style="color:var(--lime)">Green</b></td><td>Platform payout sweep; group-guarantee for new entrants.</td></tr>
+<tr><td><b style="color:#7ab8ff">Blue</b></td><td>Pilot, review gates, stop-loss.</td></tr></table></div></div>
+<div class="card an" style="margin-top:12px"><h3>Evidence and denominator test (Levitin)</h3><p>Claim: "gig workers earn Rs 40,000 a month". Source: platform press release. Incentive: recruitment. Sample: top earners. Denominator: active drivers, not all. <b>Rejected.</b> Kamai sizes limits from each worker's own verified inflow instead. Correlation caution: higher platform share correlates with lower default, but tenure on platform may drive both, so the pilot tests both separately.</p></div>
+<p class="src">All counts and scores are team outputs. NITI Aayog 2022 for gig base (Verified). Levitin, A Field Guide to Lies (2016); Chatfield (2022).</p></section>
+
+<!-- 5 DECISION -->
+<section class="s" data-n="Show weights then scores. Panel Q: are the scores subjective? A: yes, so independent pre-scoring and sensitivity are built in. Hybrid still wins if inclusion weight drops 10 points.">
+<h2>How we decided, and how we guard against bias</h2><div class="c"><b>CTDM U3</b><b>CO4</b></div>
+<div class="g" style="grid-template-columns:1.1fr 1fr;margin-top:12px">
+<div class="card an"><h3>Rational decision: underwriting choice</h3>
+<table><tr><th>Criterion (weight %)</th><th>Bureau</th><th>Cash-flow</th><th>Hybrid</th></tr>
+<tr><td>Thin-file accuracy (30)</td><td>4</td><td>8</td><td>9</td></tr><tr><td>Inclusion reach (20)</td><td>3</td><td>8</td><td>8</td></tr><tr><td>Loss control (25)</td><td>6</td><td>7</td><td>8</td></tr><tr><td>Cost and speed (15)</td><td>8</td><td>6</td><td>6</td></tr><tr><td>Regulatory fit (10)</td><td>9</td><td>8</td><td>9</td></tr>
+<tr><td><b>Weighted score /10</b></td><td><b>5.40</b></td><td><b>7.45</b></td><td><b style="color:var(--lime)">8.10</b></td></tr></table>
+<p class="so">So what: hybrid, with cash flow primary and bureau secondary, is chosen. <span class="t a">Assumption</span></p>
+<h3 style="margin-top:8px">Committee safeguards (groupthink, group shift)</h3><ul><li>Independent written scores before discussion</li><li>Rotating devil's advocate</li><li>Dissent log kept with the file</li><li>Pre-mortem: "it is a year later, the pilot failed, why?"</li></ul></div>
+<div class="g"><div class="card an" style="--i:1"><h3>Bias map and counter-feature</h3>
+<table><tr><th>Borrower</th><th>Counter</th></tr><tr><td>Present bias</td><td>Opt-out sweep</td></tr><tr><td>Loss aversion</td><td>Loss-framed streak</td></tr><tr><td>Optimism bias</td><td>Limit capped by CV haircut</td></tr><tr><td>Mental accounting</td><td>Named buckets</td></tr><tr><td>Sunk cost</td><td>Free exit, no penalty</td></tr>
+<tr><th>Banker</th><th>Counter</th></tr><tr><td>Anchoring on bureau</td><td>Score hidden until cash-flow rating</td></tr><tr><td>Confirmation, availability</td><td>Rolling 12-month stats, not last default</td></tr><tr><td>Overconfidence, herding</td><td>Pre-vote scores, dissent log</td></tr><tr><td>Status quo</td><td>Yearly model review gate</td></tr></table></div>
+<div class="card an" style="--i:2"><h3>VUCA in the product</h3><p><b>Volatility:</b> weekly baseline, 25 to 30% trigger. <b>Uncertainty:</b> five stress scenarios. <b>Complexity:</b> one score from six cash-flow features. <b>Ambiguity:</b> plain-language KFS, rule changes tested by scenario.</p></div></div></div>
+<p class="src">Weighted score = sum(weight x score). Bureau: 1.2+0.6+1.5+1.2+0.9 = 5.40. Hybrid: 2.7+1.6+2.0+0.9+0.9 = 8.10. Kahneman (2015), Dobelli (2013).</p></section>
+
+<!-- 6 MARKET -->
+<section class="s" data-n="Lead with the modest SOM. Panel Q: why only 3% of SAM? A: acquisition via partner bank branches and one platform, conversion assumed 8%.">
+<h2>Market, competition and advantage</h2><div class="c"><b>CTDM U3</b></div>
+<div class="g" style="grid-template-columns:.9fr 1.35fr;margin-top:12px">
+<div class="card an"><h3>TAM, SAM, SOM</h3>
+<svg viewBox="0 0 300 190" width="290"><circle cx="100" cy="95" r="88" fill="var(--mag)" opacity=".5"/><circle cx="100" cy="135" r="52" fill="var(--saf)" opacity=".8"/><circle cx="100" cy="165" r="22" fill="var(--lime)"/><g font-size="10" fill="#fff"><text x="200" y="40">TAM 16.45M people</text><text x="200" y="53">Rs 49,350 cr demand</text><text x="200" y="100">SAM 1.645M people</text><text x="200" y="113">Rs 4,935 cr</text><text x="200" y="160">SOM 50,000 (Y3)</text><text x="200" y="173">Rs 90 cr outstanding</text></g></svg>
+<p>TAM = 23.5M x 70% banked and smartphone. SAM = TAM x 25% AA-reachable in 10 cities x 40% with 6+ months inflow. SOM = 3% of SAM. <span class="t d">Derived</span></p>
+<table><tr><th></th><th>Y1</th><th>Y2</th><th>Y3</th></tr><tr><td>Customers</td><td>5,000</td><td>20,000</td><td>50,000</td></tr><tr><td>Book (Rs cr)</td><td>9</td><td>36</td><td>90</td></tr><tr><td>% of SAM</td><td>0.30</td><td>1.22</td><td>3.04</td></tr></table>
+<p class="so">So what: share of TAM is 0.30%, small enough to execute.</p></div>
+<div class="g"><div class="card an" style="--i:1"><h3>Competitor matrix (team assessment)</h3>
+<table><tr><th></th><th>Cash-flow basis</th><th>Flexible repay</th><th>Savings buffer</th><th>Shock trigger</th><th>APR clear</th><th>Bank trust</th><th>Speed, reach</th></tr>
+<tr><td>Loan apps (Fibe, Moneyview, Navi)</td><td><i class="dot h"></i></td><td><i class="dot h"></i></td><td><i class="dot"></i></td><td><i class="dot"></i></td><td><i class="dot f"></i></td><td><i class="dot h"></i></td><td><i class="dot f"></i></td></tr>
+<tr><td>Platform-linked credit</td><td><i class="dot f"></i></td><td><i class="dot h"></i></td><td><i class="dot"></i></td><td><i class="dot h"></i></td><td><i class="dot h"></i></td><td><i class="dot h"></i></td><td><i class="dot f"></i></td></tr>
+<tr><td>MSME lenders (Aye, Ujjivan SFB)</td><td><i class="dot h"></i></td><td><i class="dot h"></i></td><td><i class="dot h"></i></td><td><i class="dot"></i></td><td><i class="dot f"></i></td><td><i class="dot f"></i></td><td><i class="dot h"></i></td></tr>
+<tr><td>Informal, chits</td><td><i class="dot f"></i></td><td><i class="dot f"></i></td><td><i class="dot h"></i></td><td><i class="dot h"></i></td><td><i class="dot"></i></td><td><i class="dot"></i></td><td><i class="dot f"></i></td></tr>
+<tr><td><b style="color:var(--yel)">Kamai</b></td><td><i class="dot f"></i></td><td><i class="dot f"></i></td><td><i class="dot f"></i></td><td><i class="dot f"></i></td><td><i class="dot f"></i></td><td><i class="dot f"></i></td><td><i class="dot"></i></td></tr></table>
+<p>Full dot = strong, half = partial, empty = absent. Competitors lead on speed and reach; Kamai is weaker at launch on both. <span class="t a">Assumption</span></p></div>
+<div class="g" style="grid-template-columns:1fr 1fr"><div class="card an" style="--i:2"><h3>Initial advantage</h3><ul><li>Only bundle of credit, buffer and shock repayment</li><li>Credit loss 5.5% vs 9% fixed EMI</li><li>Deposit base and savings float cut funding cost</li><li>Switching cost: buffer and streak</li></ul></div>
+<div class="card an" style="--i:3"><h3>Weakness and fix</h3><ul><li>Onboarding friction: 3-tap AA flow</li><li>Cash earnings invisible: cap first loan</li><li>Bank speed: 10-minute decision SLA</li></ul><p>Moat: cash-flow history compounds with each month.</p></div></div></div></div>
+<p class="src">Fibe lists 18% APR onwards, Rs 500 to 10 lakh (Freo guide, Oct 2026, Verified for Fibe only). Other competitor features not re-verified here. Acquisition: 8% conversion, CAC Rs 900 (Assumptions).</p></section>
+
+<!-- 7 ECONOMICS + ASK -->
+<section class="s" data-n="Close with the ask. Panel Q: what if loss is 12%? A: contribution falls by Rs 1,170 per customer, still positive; stop-loss triggers at 8% delinquency.">
+<h2>Economics, risk and the ask</h2><div class="c"><b>CTDM U1</b><b>U2</b><b>U3</b><b>CO4</b></div>
+<div class="g" style="grid-template-columns:1.05fr 1fr 1fr;margin-top:12px">
+<div class="card an"><h3>One customer, per year (Rs)</h3>
+<table><tr><th></th><th>Fixed EMI</th><th>Kamai</th></tr><tr><td>Outstanding (60% of Rs 30,000)</td><td>18,000</td><td>18,000</td></tr><tr><td>Interest at 24% APR</td><td>4,320</td><td>4,320</td></tr><tr><td>Cost of funds 7%</td><td>-1,260</td><td>-1,260</td></tr><tr><td>Credit loss</td><td>-1,620 (9%)</td><td>-990 (5.5%)</td></tr><tr><td>Servicing and data</td><td>-700</td><td>-700</td></tr><tr><td>Savings float</td><td>0</td><td>+160</td></tr><tr><td><b>Contribution</b></td><td><b>740</b></td><td><b style="color:var(--lime)">1,530</b></td></tr><tr><td>Payback on CAC Rs 900</td><td>14.6 mo</td><td>7.1 mo</td></tr></table>
+<p><span class="t a">Assumption</span><span class="t d">Derived</span> Breakeven: Rs 3 cr platform cost / 1,530 = 19,608 customers.</p>
+<p class="so">So what: Layer 3 doubles contribution and halves payback.</p></div>
+<div class="card an" style="--i:1"><h3>Scenarios on Y3 book (Rs 90 cr), 70% loss given default</h3>
+<table><tr><th></th><th>Delinq. fixed / Kamai</th><th>Loss Rs cr</th></tr><tr><td>Base</td><td>9% / 5.5%</td><td>5.67 / 3.47</td></tr><tr><td>Stress: 30% income drop, 8 wks</td><td>16% / 9%</td><td>10.08 / 5.67</td></tr><tr><td>Severe: payout cut + fuel spike</td><td>24% / 14%</td><td>15.12 / 8.82</td></tr></table>
+<p class="so">So what: under stress, adaptive repayment saves Rs 4.41 cr of loss, about 44%.</p>
+<h3 style="margin-top:8px">Sensitivity (contribution, Rs)</h3>
+<svg viewBox="0 0 300 80" width="100%"><g font-size="9" fill="#fff"><text x="0" y="14">Credit loss +/-2 pts</text><rect x="110" y="6" width="180" height="10" fill="var(--mag)"/><text x="0" y="40">Utilisation -10 pts</text><rect x="110" y="32" width="173" height="10" fill="var(--saf)"/><text x="0" y="66">Cost of funds +/-1 pt</text><rect x="110" y="58" width="90" height="10" fill="var(--yel)"/></g></svg>
+<p>+/-360, -345, +/-180 per customer. <span class="t d">Derived</span></p></div>
+<div class="card an" style="--i:2"><h3>Borrower gain</h3><p>Rs 6,480 per year vs 60% informal; Rs 32.4 cr across 50,000 customers <span class="t d">Derived</span></p>
+<h3 style="margin-top:8px">Rollout and gates</h3><ul><li>Phase 1, 6 months: 1,000 customers, 3 districts</li><li>Gate: 90+ dpd under 8%, AA completion above 60%</li><li>Phase 2: 5,000 customers, 10 cities</li><li>Phase 3: scale to 50,000 by Y3</li></ul>
+<h3 style="margin-top:8px">Risks</h3><p>Moral hazard on pauses: 2 pauses per quarter cap. Data gaps: first-loan cap Rs 25,000.</p>
+<div style="margin-top:8px;border:2px solid var(--lime);border-radius:6px 18px 6px 18px;padding:9px"><b style="color:var(--lime)">DECISION REQUESTED</b><p>Approve a pilot of 1,000 customers in 3 districts, Rs 1.8 crore peak exposure, with an automatic stop-loss at 8% 90-day delinquency.</p></div></div></div>
+<div class="card an" style="margin-top:10px;display:flex;gap:18px;align-items:center;padding:7px 13px"><b style="color:var(--yel)">Course coverage</b><span>U1 Critical thinking &#10003;</span><span>U2 Problem solving &#10003;</span><span>U3 Decision making &#10003;</span><span>Biases (CO4) &#10003;</span><span>VUCA &#10003;</span></div>
+<p class="src">Pilot exposure: 1,000 x Rs 18,000 = Rs 1.8 cr (Derived). Informal APR, utilisation, loss rates and scenario shocks are team assumptions; literature on flexible repayment and commitment savings (Karlan et al.) to be cited with exact figures before submission.</p></section>
+
+<!-- 8 THANKS -->
+<section class="s" data-n="Invite questions. Keep the problem and promise to one breath.">
+<div style="position:absolute;left:0;right:0;top:120px;text-align:center"><svg width="380" height="112" style="color:var(--pap)"><use href="#logo"/></svg>
+<h2 style="font-size:46px;margin-top:20px;color:var(--pap)">Thank you</h2><br>
+<p style="font-size:17px;margin-top:16px;max-width:760px;display:inline-block">Gig and informal workers earn weekly and uneven, and banks lend monthly and fixed. Kamai lets the loan follow the income.</p>
+<p class="dp" style="font-size:22px;margin-top:20px;color:var(--lime)">Questions for the panel?</p>
+<p style="margin-top:22px">Team: [names, Group No. __] &nbsp;|&nbsp; Faculty: Dr Asha Binu Raj &nbsp;|&nbsp; Contact: [email]</p>
+<div style="display:flex;gap:10px;justify-content:center;margin-top:16px;align-items:center"><span style="background:var(--ink);padding:8px;border-radius:8px;color:var(--pap)"><svg width="95" height="28"><use href="#logo"/></svg></span><span style="background:var(--pap);padding:8px;border-radius:8px;color:var(--ink)"><svg width="95" height="28"><use href="#logo"/></svg></span><span style="background:var(--saf);padding:8px;border-radius:8px;color:var(--ink)"><svg width="95" height="28"><use href="#logo"/></svg></span></div></div>
+<p class="src" style="text-align:center;left:44px;right:44px">Sources: NITI Aayog (2022); Freo (2026); Kahneman (2015); Chatfield (2022); Dobelli (2013); Levitin (2016). Art: original SVG illustrations, no third-party images. Fonts: Bricolage Grotesque, Manrope (SIL OFL).</p></section>
+</div>
+<div id="road"></div><div id="notes"></div>
+<script>
+const S=[...document.querySelectorAll('.s')],st=document.getElementById('stage'),nt=document.getElementById('notes');let i=0;
+function fit(){const k=Math.min(innerWidth/1280,innerHeight/720);st.style.transform=`scale(${k}) translate(-50%,-50%)`;st.style.left='50%';st.style.top='50%';st.style.transformOrigin='0 0'}
+fit();addEventListener('resize',fit);
+(function(){const sv=document.getElementById('fish'),ns='http://www.w3.org/2000/svg';
+const B=[["Borrower income and behaviour",["Weekly uneven payouts>platform pays per trip","No emergency buffer*L2","Present bias on spending"]],["Data and underwriting",["No payslip or ITR*L1","Bureau file thin or absent","Cash earnings invisible"]],["Product design",["Fixed 30-day EMI date*L3","Month as unit of credit","No shock clause"]],["Bank process and people",["Officer anchors on CIBIL>bureau shown first","Committee conservatism","Slow 7-day sanction"]],["Market and technology",["Informal lenders in minutes","AA consent drop-off","Low vernacular UX"]],["External and regulation",["Platform payout rule changes","Fuel and repair shocks","Monsoon, heat, app outage"]]];
+let h=`<g class="fb"><line x1="20" y1="190" x2="900" y2="190" stroke="#FFD23F" stroke-width="6" style="--i:0"/></g><path d="M900 150H1180V230H900L920 190Z" fill="#FF2E88"/><text x="1040" y="182" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">Gig and informal workers</text><text x="1040" y="199" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">default on or are excluded</text><text x="1040" y="216" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">from formal credit</text>`;
+B.forEach((b,n)=>{const top=n%2==0,col=Math.floor(n/2),bx=170+col*290,y0=top?14:366,x1=bx+60,dir=top?1:-1;
+h+=`<g class="fb"><line x1="${bx}" y1="${y0}" x2="${x1}" y2="190" stroke="#FF9F1C" stroke-width="3" style="--i:${n+1}"/></g><text x="${bx-6}" y="${top?10:378}" font-size="12" font-weight="700" fill="#FFD23F" font-family="Bricolage Grotesque">${b[0]}</text>`;
+b[1].forEach((c,k)=>{const y=y0+dir*(34+k*40),x=bx+(y-y0)/(190-y0)*60;let[t,l]=c.split('*'),sub='';if(!l&&t.includes('>'))[t,sub]=t.split('>');if(l===undefined){}
+let root=l!==undefined;if(root){}
+h+=`<line x1="${x-60}" y1="${y}" x2="${x}" y2="${y}" stroke="#FF9F1C" stroke-opacity=".6"/><text x="${x-64}" y="${y-4}" text-anchor="end" font-size="11.5" fill="${root?'#B8F23A':'#FFF4E0'}" font-weight="${root?800:400}" ${root?'class="pl"':''}>${t}</text>`;
+if(sub)h+=`<text x="${x-64}" y="${y+9}" text-anchor="end" font-size="9.5" fill="#cbbf9f">sub: ${sub}</text>`;
+if(root)h+=`<text x="${x-64}" y="${y+10}" text-anchor="end" font-size="9.5" fill="#FF2E88" font-weight="700">ROOT &rarr; Layer ${l.slice(1)}</text>`;});});
+sv.innerHTML=h})();
+function go(n){i=Math.max(0,Math.min(S.length-1,n));S.forEach((s,k)=>s.classList.toggle('on',k==i));document.getElementById('road').style.width=(i+1)/S.length*100+'%';nt.textContent=S[i].dataset.n;
+S[i].querySelectorAll('.an').forEach((e,k)=>{if(!e.style.getPropertyValue('--i'))e.style.setProperty('--i',k%6)})}
+addEventListener('keydown',e=>{if(['ArrowRight','ArrowDown',' ','PageDown'].includes(e.key))go(i+1);if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key))go(i-1);if(e.key=='n'||e.key=='N')nt.style.display=nt.style.display=='block'?'none':'block'});
+let sx=0;addEventListener('touchstart',e=>sx=e.touches[0].clientX);addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>50)go(i+(d<0?1:-1))});
+addEventListener('wheel',(()=>{let l=0;return e=>{if(Date.now()-l>700){l=Date.now();go(i+(e.deltaY>0?1:-1))}}})());
+go(0);
+</script></body></html>
